@@ -38,12 +38,7 @@ const getData = async (qString, limit) => {
   return dataMain;
 }
 
-const getCountryFlag = async (countryCode) => {
 
-    const flag = await axios.get("https://countryflagsapi.com/png/in");
-    console.log(flag);
-  
-}
 
 const creatRow = async (qString,num=5) => {
   let response = await getData(qString, num);
@@ -63,8 +58,7 @@ const showData=()=>{
  
      itemsToShow.forEach((elem, idx) => {
        const newTr = document.createElement('tr');
- 
-       const imgLink=getCountryFlag(elem.countryCode);
+
        // newElm.setAttribute('class','show');
        newTr.innerHTML = `
        <td>${count+idx + 1}</td>
@@ -137,7 +131,9 @@ const changeNoOfRow = (e) => {
   // console.log(e.which);
   if (e.which === 13) {
     inc = parseInt(e.target.value);
-
+      count = 0;
+      total=0 ;
+      current=1;
       creatRow(qString);
 
     e.target.value = "";
