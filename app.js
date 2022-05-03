@@ -146,4 +146,4 @@ const changeNoOfRow = (e) => {
 search.addEventListener('keydown', handleSearch);
 totalRow.addEventListener('keydown', changeNoOfResults);
 pagination.addEventListener("click",incDecCount);
-ctyPerPage.addEventListener('keydown',changeNoOfRow);
+ctyPerPage.addEventListener('keydown',changeNoOfRow); 

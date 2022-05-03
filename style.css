@@ -1,6 +1,7 @@
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 .container{
     max-width: 2000px;
@@ -41,13 +42,30 @@ button{
     /* background-color: aqua; */
     /* border: none; */
 }
-
+.search-bar{
+    font-size: 12px;
+    border:1px solid rgb(222, 226, 230);
+    border-radius: 2px;
+    height: 24px;
+    width: fit-content;
+    padding:0 4px;
+}
 #search{
-font-size: 12px;
-border:1px solid rgb(222, 226, 230);
-border-radius: 2px;
-height: 24px;
-padding:0 4px;
+    height: 100%;
+    width: 75%;
+    outline: none;
+    border: none;
+}
+.search-bar:focus-within{
+    border-color: #7952b3; 
+    box-shadow: 0 0 0 3px rgb(121 82 179 / 25%);
+}
+.search-bar:disabled{
+    background-color: rgb(233, 236, 239)
+}
+.search-btn{
+    width: 20%;
+    height: 100%;
 }
 img{
     height: 3rem;
